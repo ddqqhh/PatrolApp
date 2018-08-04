@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:title="@string/check_point_list" />
+
+    <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
+        android:id="@+id/no_result_icon"
+        style="@style/CommonTextStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text="@string/no_result"
+        android:textSize="22sp"
+        android:visibility="gone"
+        app:textView_drawableHeight="100dp"
+        app:textView_drawableTop="@drawable/no_result"
+        app:textView_drawableWidth="100dp" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/check_point_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/shape_common_list_background"
+            android:orientation="vertical"
+            android:padding="20dp" />
+
+    </ScrollView>
+
+</LinearLayout>

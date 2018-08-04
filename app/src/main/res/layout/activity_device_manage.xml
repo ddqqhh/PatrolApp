@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal">
+
+        <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
+            android:id="@+id/bind_new_one_button"
+            style="@style/CommonTextStyle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:drawablePadding="13dp"
+            android:text="@string/add_check_point"
+            android:textColor="@android:color/black"
+            app:textView_drawableHeight="45dp"
+            app:textView_drawableTop="@drawable/bind"
+            app:textView_drawableWidth="45dp" />
+
+        <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
+            android:id="@+id/repair_button"
+            style="@style/CommonTextStyle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/bind_new_one_button"
+            android:drawablePadding="13dp"
+            android:text="@string/device_repair_request"
+            android:textColor="@android:color/black"
+            app:textView_drawableHeight="45dp"
+            app:textView_drawableTop="@drawable/repair"
+            app:textView_drawableWidth="45dp" />
+
+        <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
+            android:id="@+id/rebind_button"
+            style="@style/CommonTextStyle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/bind_new_one_button"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="13dp"
+            android:text="@string/device_replace"
+            android:textColor="@android:color/black"
+            app:textView_drawableHeight="45dp"
+            app:textView_drawableTop="@drawable/rebind"
+            app:textView_drawableWidth="45dp" />
+
+        <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
+            android:id="@+id/logout_button"
+            style="@style/CommonTextStyle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/repair_button"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/rebind_button"
+            android:drawablePadding="13dp"
+            android:text="@string/logout"
+            android:textColor="@android:color/black"
+            app:textView_drawableHeight="45dp"
+            app:textView_drawableTop="@drawable/logout"
+            app:textView_drawableWidth="45dp" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/CommonHorizontalDividerStyle"
+        android:layout_above="@+id/close_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="47dp"
+        android:background="@color/gray_eeeeee" />
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:src="@drawable/cross_gray" />
+
+</RelativeLayout>
