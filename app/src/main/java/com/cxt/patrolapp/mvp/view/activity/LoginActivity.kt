@@ -8,7 +8,7 @@ import com.cxt.patrolapp.extend.startActivity
 import com.cxt.patrolapp.mvp.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity(), LoginView {
+class LoginActivity : BaseEditTextActivity(), LoginView {
 
     private val presenter = LoginPresenter(this)
 

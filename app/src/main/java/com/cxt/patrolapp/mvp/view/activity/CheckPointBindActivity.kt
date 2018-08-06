@@ -12,7 +12,7 @@ import com.cxt.patrolapp.mvp.view.contract.CheckPointBindView
 import com.skybeacon.sdk.locate.SKYBeacon
 import kotlinx.android.synthetic.main.activity_check_point_bind.*
 
-class CheckPointBindActivity : BaseActivity(), CheckPointBindView {
+class CheckPointBindActivity : BaseEditTextActivity(), CheckPointBindView {
 
     private val MODE_ADD = 0
     private val MODE_REPLACE = 1
