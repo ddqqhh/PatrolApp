@@ -54,8 +54,16 @@ class CheckInActivity : BaseActivity(), CheckInView {
         })
 
         patrolPlan?.let {
-            this.patrolPlan = it
-            presenter.loadCheckPoint(it)
+            if (!it.status.isDone()) {
+                this.patrolPlan = it
+                presenter.loadCheckPoint(it)
+            } else {
+                AlertDialog.Builder(this)
+                        .setMessage(getString(R.string.alert_all_check_point_is_checked))
+                        .setPositiveButton(getString(R.string.ok)) { _, _ -> finish() }
+                        .setCancelable(false)
+                        .show()
+            }
         }
     }
 
@@ -86,6 +94,11 @@ class CheckInActivity : BaseActivity(), CheckInView {
         } else {
             checked_count_text.text = getString(R.string.checked_count_format).with("00")
             uncheck_count_text.text = getString(R.string.uncheck_count_format).with("00")
+            AlertDialog.Builder(this)
+                    .setMessage(getString(R.string.alert_check_point_is_empty))
+                    .setPositiveButton(getString(R.string.ok)) { _, _ -> finish() }
+                    .setCancelable(false)
+                    .show()
         }
     }
 
