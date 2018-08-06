@@ -12,7 +12,7 @@ enum class NetType {
 
     companion object {
 
-        fun getType(): NetType {
+        private fun getType(): NetType {
             val connectivityManager = PatrolApplication.context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
             val networkInfo = connectivityManager?.activeNetworkInfo
             if (networkInfo == null || !networkInfo.isConnected) {

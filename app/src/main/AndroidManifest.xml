@@ -18,9 +18,8 @@
     <application
         android:name=".mvp.view.PatrolApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -28,7 +27,6 @@
         <activity android:name=".mvp.view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -36,7 +34,9 @@
         <activity
             android:name=".mvp.view.activity.MainActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".mvp.view.activity.CheckInActivity" />
+        <activity
+            android:name=".mvp.view.activity.CheckInActivity"
+            android:theme="@style/GrayBackgroundActivityStyle2" />
         <activity android:name=".mvp.view.activity.CheckPointBindActivity" />
         <activity android:name=".mvp.view.activity.DeviceManageActivity" />
         <activity

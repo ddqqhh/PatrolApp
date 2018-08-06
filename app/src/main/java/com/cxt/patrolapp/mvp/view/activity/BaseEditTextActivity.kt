@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import com.cxt.patrolapp.R
 import com.cxt.patrolapp.extend.childes
 
 @SuppressLint("Registered")

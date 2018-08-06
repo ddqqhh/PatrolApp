@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.cxt.patrolapp.CommonConst
 import com.cxt.patrolapp.mvp.view.customview.DeviceInfoItem
-import com.cxt.keepnightwatch.utils.SkyBeaconManager
+import com.cxt.patrolapp.utils.SkyBeaconManager
 import com.cxt.patrolapp.R
 import com.cxt.patrolapp.extend.startActivity
 import com.skybeacon.sdk.locate.SKYBeacon

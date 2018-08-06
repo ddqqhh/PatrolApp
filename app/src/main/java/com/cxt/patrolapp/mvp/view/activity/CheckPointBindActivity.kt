@@ -14,11 +14,6 @@ import kotlinx.android.synthetic.main.activity_check_point_bind.*
 
 class CheckPointBindActivity : BaseEditTextActivity(), CheckPointBindView {
 
-    private val MODE_ADD = 0
-    private val MODE_REPLACE = 1
-
-    private var mode = MODE_ADD
-
     private val presenter = CheckPointBindPresenter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {

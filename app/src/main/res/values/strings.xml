@@ -4,13 +4,8 @@
 
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
-    <string name="back">返回</string>
-    <string name="next">下一步</string>
-    <string name="searching">搜索中</string>
-    <string name="plus">+</string>
     <string name="menu_mark">≡</string>
     <string name="no_result">无结果</string>
-    <string name="no_device">附近无设备</string>
     <string name="refresh">刷新</string>
     <string name="account">账号</string>
     <string name="password">密码</string>
@@ -29,11 +24,9 @@
 
     <string name="patrol_schedule">巡更任务</string>
     <string name="patrol_finished">任务完成</string>
-    <string name="start_patrol">开始巡逻</string>
     <string name="add_check_point">新增巡更点</string>
     <string name="device_repair_request">设备报修</string>
     <string name="device_replace">设备更换</string>
-    <!--<string name="c">请再靠近一些</string>-->
     <string name="schedule_is_empty">无巡更任务</string>
 
     <string name="login_success">登录成功</string>
@@ -42,16 +35,13 @@
 
     <string name="check_in">签到</string>
     <string name="check_in_success">签到成功</string>
-    <string name="check_in_failed">签到失败</string>
 
     <string name="repair_request_success">报修申请已提交</string>
-    <string name="repair_request_failed">报修申请失败</string>
 
     <string name="check_point_list">巡更点列表</string>
     <string name="scan_device">设备扫描</string>
 
     <string name="patrol_schedule_is_done">该巡更任务已完成</string>
-    <string name="select_check_point_tip">请选择巡更点：</string>
 
     <string name="patrol_schedule_title_format">%1$s　　巡更任务</string>
 
@@ -63,7 +53,6 @@
     <string name="error_request_failure">请求失败！</string>
     <string name="error_account_is_empty">账号不能为空！</string>
     <string name="error_password_is_empty">密码不能为空！</string>
-    <string name="error_login_failed">登录失败</string>
 
     <string name="alert_location_permission_request">我们需要使用定位功能，请允许我们打开定位权限</string>
     <string name="alert_all_check_point_is_checked">已完成所有签到！</string>

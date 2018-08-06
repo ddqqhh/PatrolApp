@@ -1,4 +1,4 @@
-package com.cxt.keepnightwatch.utils
+package com.cxt.patrolapp.utils
 
 import android.bluetooth.BluetoothAdapter
 import com.cxt.patrolapp.mvp.view.PatrolApplication
@@ -56,9 +56,9 @@ object SkyBeaconManager {
 
     fun startRange(onFailed: (() -> Unit)? = null, onDisconnect: (() -> Unit)? = null, onFound: ((List<SKYBeacon>) -> Unit)? = null) {
         stop()
-        this.onFailed = onFailed
-        this.onDisconnect = onDisconnect
-        this.onFound = onFound
+        SkyBeaconManager.onFailed = onFailed
+        SkyBeaconManager.onDisconnect = onDisconnect
+        SkyBeaconManager.onFound = onFound
         if (BluetoothAdapter.getDefaultAdapter().enable()) {
             SKYBeaconManager.getInstance().startScanService(object : ScanServiceStateCallback {
                 override fun onServiceDisconnected() {
@@ -77,9 +77,9 @@ object SkyBeaconManager {
 
     fun startMonitor(onFailed: (() -> Unit)? = null, onDisconnect: (() -> Unit)? = null, onRange: ((List<SKYBeacon>) -> Unit)? = null) {
         stop()
-        this.onFailed = onFailed
-        this.onDisconnect = onDisconnect
-        this.onRange = onRange
+        SkyBeaconManager.onFailed = onFailed
+        SkyBeaconManager.onDisconnect = onDisconnect
+        SkyBeaconManager.onRange = onRange
         if (BluetoothAdapter.getDefaultAdapter().enable()) {
             SKYBeaconManager.getInstance().startScanService(object : ScanServiceStateCallback {
                 override fun onServiceDisconnected() {

@@ -44,7 +44,8 @@ class MainActivity : BaseActivity(), MainView {
                     true -> 30.toPx()
                     false -> 0
                 }
-                outRect.bottom = when (parent.getChildAdapterPosition(view) == parent.adapter?.itemCount ?: 0 - 1) {
+                outRect.bottom = when (parent.getChildAdapterPosition(view) == (parent.adapter?.itemCount
+                        ?: 0) - 1) {
                     true -> 120.toPx()
                     else -> 0
                 }

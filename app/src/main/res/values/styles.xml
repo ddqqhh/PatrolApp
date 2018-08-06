@@ -4,14 +4,16 @@
         <item name="colorPrimary">@android:color/black</item>
         <item name="colorPrimaryDark">@android:color/black</item>
         <item name="colorAccent">@color/gray_333333</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:fitsSystemWindows">true</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:splitMotionEvents">false</item>
     </style>
 
     <style name="GrayBackgroundActivityStyle" parent="AppTheme">
         <item name="android:windowBackground">@color/gray_eeeeee</item>
+    </style>
+
+    <style name="GrayBackgroundActivityStyle2" parent="AppTheme">
+        <item name="android:windowBackground">@color/gray_666666</item>
     </style>
 
     <style name="CommonTextStyle">
@@ -30,11 +32,6 @@
         <item name="android:textColorHint">@color/gray_d2d2d2</item>
         <item name="android:textColor">@color/gray_333333</item>
         <item name="android:singleLine">true</item>
-    </style>
-
-    <style name="CommonVerticalDividerStyle">
-        <item name="android:layout_width">1dp</item>
-        <item name="android:layout_height">match_parent</item>
     </style>
 
     <style name="CommonHorizontalDividerStyle">

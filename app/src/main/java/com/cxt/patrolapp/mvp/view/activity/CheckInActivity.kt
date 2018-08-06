@@ -6,13 +6,14 @@ import android.os.Bundle
 import android.view.View
 import com.cxt.patrolapp.CommonConst
 import com.cxt.patrolapp.mvp.view.contract.CheckInView
-import com.cxt.keepnightwatch.utils.SkyBeaconManager
+import com.cxt.patrolapp.utils.SkyBeaconManager
 import com.cxt.patrolapp.R
 import com.cxt.patrolapp.extend.startActivity
 import com.cxt.patrolapp.extend.with
 import com.cxt.patrolapp.mvp.model.entity.CheckPoint
 import com.cxt.patrolapp.mvp.model.entity.PatrolSchedule
 import com.cxt.patrolapp.mvp.presenter.CheckInPresenter
+import com.cxt.patrolapp.utils.VibratorManager
 import kotlinx.android.synthetic.main.activity_check_in.*
 import java.io.Serializable
 import java.text.DecimalFormat
@@ -45,7 +46,11 @@ class CheckInActivity : BaseActivity(), CheckInView {
         uncheck_count_text.setOnClickListener { showProgressListener.invoke(checkPointList) }
 
         check_in_button.setListener(onTriggered = {
-            checkPointList.firstOrNull { it.deviceAddress == currentCheckPoint?.deviceAddress }?.let { presenter.checkIn(it) }
+            checkPointList.firstOrNull { it.deviceAddress == currentCheckPoint?.deviceAddress }
+                    ?.let {
+                        VibratorManager.vibrate(300)
+                        presenter.checkIn(it)
+                    }
         })
 
         patrolPlan?.let {

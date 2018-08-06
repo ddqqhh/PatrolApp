@@ -3,10 +3,10 @@ package com.cxt.patrolapp.mvp.view.customview
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.widget.TextView
+import androidx.appcompat.widget.AppCompatTextView
 import com.cxt.patrolapp.R
 
-open class CustomSingleDrawableTextView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = android.R.attr.textViewStyle) : TextView(context, attrs, defStyleAttr) {
+open class CustomSingleDrawableTextView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = android.R.attr.textViewStyle) : AppCompatTextView(context, attrs, defStyleAttr) {
 
     private var drawableWidth: Int
     private var drawableHeight: Int
@@ -29,11 +29,6 @@ open class CustomSingleDrawableTextView @JvmOverloads constructor(context: Conte
                 top?.let { restrict(top) },
                 right?.let { restrict(right) },
                 bottom?.let { restrict(bottom) })
-    }
-
-    fun setDrawableSize(width: Int, height: Int) {
-        drawableWidth = width
-        drawableHeight = height
     }
 
     private fun restrict(drawable: Drawable): Drawable {

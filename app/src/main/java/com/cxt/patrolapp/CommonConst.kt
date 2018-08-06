@@ -7,8 +7,6 @@ object CommonConst {
     const val GET_CHECK_POINT_FOR_REPAIR_REQUEST = 10
     const val GET_CHECK_POINT_FOR_REPLACE_REQUEST = 11
     const val GET_CHECK_POINT_RESULT = 12
-    const val GET_DEVICE_REQUEST = 20
-    const val GET_DEVICE_RESULT = 21
 
     const val PATROL_PLAN = "patrol_plan"
     const val CHECK_POINT = "check_point"

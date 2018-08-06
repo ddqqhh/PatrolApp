@@ -1,4 +1,4 @@
-package com.cxt.keepnightwatch.utils
+package com.cxt.patrolapp.utils
 
 import android.app.Service
 import android.os.Vibrator
