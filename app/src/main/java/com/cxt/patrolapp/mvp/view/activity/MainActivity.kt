@@ -54,13 +54,12 @@ class MainActivity : BaseActivity(), MainView {
         plan_list_view.adapter = adapter
 
         menu_button.setOnClickListener { startActivity(DeviceManageActivity::class.java) }
+        refresh_button.setOnClickListener { reload() }
     }
 
     override fun onResume() {
         super.onResume()
-        adapter.planList = listOf()
-        adapter.notifyDataSetChanged()
-        presenter.loadScheduleRecently()
+        reload()
     }
 
     override fun loadPlanSuccess(scheduleList: List<PatrolSchedule>) {
@@ -73,5 +72,11 @@ class MainActivity : BaseActivity(), MainView {
             adapter.planList = scheduleList
             adapter.notifyDataSetChanged()
         }
+    }
+
+    private fun reload() {
+        adapter.planList = listOf()
+        adapter.notifyDataSetChanged()
+        presenter.loadScheduleRecently()
     }
 }

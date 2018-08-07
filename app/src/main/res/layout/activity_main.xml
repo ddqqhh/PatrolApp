@@ -24,6 +24,16 @@
         app:textView_drawableTop="@drawable/no_result"
         app:textView_drawableWidth="100dp" />
 
+    <TextView
+        android:id="@+id/refresh_button"
+        style="@style/CommonTextStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:padding="10dp"
+        android:text="@string/refresh"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/menu_button"
         android:layout_width="60dp"
