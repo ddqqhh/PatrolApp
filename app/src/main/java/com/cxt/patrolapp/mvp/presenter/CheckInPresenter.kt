@@ -26,8 +26,7 @@ class CheckInPresenter(view: CheckInView) : BasePresenter<CheckInView>(view) {
                         onError = {
                             view.onError(throwable = it)
                             view.dismissProgressDialog()
-                        }
-                )
+                        })
     }
 
     fun checkIn(checkPoint: CheckPoint) {
@@ -46,7 +45,6 @@ class CheckInPresenter(view: CheckInView) : BasePresenter<CheckInView>(view) {
                         onError = {
                             view.onError(throwable = it)
                             view.dismissProgressDialog()
-                        }
-                )
+                        })
     }
 }

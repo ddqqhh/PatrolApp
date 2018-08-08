@@ -34,14 +34,14 @@ class LoginPresenter(view: LoginView) : BasePresenter<LoginView>(view) {
                 }
                 .assignSchedulers()
                 .subscribeBy(
-                        onNext = {
+                        onNext = { response ->
                             view.dismissProgressDialog()
-                            when (it.statusCode) {
+                            when (response.statusCode) {
                                 LOGIN_SUCCESS_CODE -> {
                                     view.loginSuccess()
-                                    it.data?.let { UserRepository.uid = it }
+                                    response.data?.let { UserRepository.uid = it }
                                 }
-                                else -> view.onError(it.message)
+                                else -> view.onError(response.message)
                             }
                         },
                         onError = {
