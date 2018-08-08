@@ -3,6 +3,7 @@ package com.cxt.patrolapp.mvp.model.local
 import android.preference.PreferenceManager
 import com.cxt.patrolapp.mvp.view.PatrolApplication
 
+@Suppress("unused")
 object PreferenceManage {
 
     private val sharedPreferences = PreferenceManager

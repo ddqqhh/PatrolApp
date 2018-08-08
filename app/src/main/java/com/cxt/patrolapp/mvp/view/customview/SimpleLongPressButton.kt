@@ -12,9 +12,9 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.animation.LinearInterpolator
-import androidx.annotation.ColorInt
 import com.cxt.patrolapp.R
 
+@Suppress("PrivatePropertyName")
 class SimpleLongPressButton @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr) {
 
     var buttonTitle: String? = null
@@ -87,24 +87,6 @@ class SimpleLongPressButton @JvmOverloads constructor(context: Context, attrs: A
         textPaint.textSize = textSize.toFloat()
 
         typedArray.recycle()
-    }
-
-    fun setCircleColor(@ColorInt outsideCircleColor: Int = Color.parseColor("#dddddd"),
-                       @ColorInt insideCircleColor: Int = Color.WHITE) {
-        outsideCirclePaint.color = outsideCircleColor
-        insideCirclePaint.color = insideCircleColor
-    }
-
-    fun setRollingProgressDesign(@ColorInt arcColor: Int = Color.RED,
-                                 strokeWidth: Float = 0f) {
-        rollingArcPaint.color = arcColor
-        rollingArcPaint.strokeWidth = strokeWidth
-    }
-
-    fun setTextDesign(@ColorInt textColor: Int = Color.BLACK,
-                      textSize: Float = 0f) {
-        textPaint.color = textColor
-        textPaint.textSize = textSize
     }
 
     fun setListener(onTriggered: () -> Unit = {},

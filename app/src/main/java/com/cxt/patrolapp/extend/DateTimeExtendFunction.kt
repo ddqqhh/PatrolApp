@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.cxt.patrolapp.extend
 
 import org.threeten.bp.LocalDate

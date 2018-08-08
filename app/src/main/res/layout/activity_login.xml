@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingStart="30dp"
     android:paddingEnd="30dp"
-    tools:ignore="ContentDescription">
+    tools:ignore="ContentDescription,autoFill">
 
     <TextView
         android:id="@+id/title"

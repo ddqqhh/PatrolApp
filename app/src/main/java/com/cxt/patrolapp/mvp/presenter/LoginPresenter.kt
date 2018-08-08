@@ -10,7 +10,9 @@ import org.apache.shiro.crypto.hash.Md5Hash
 
 class LoginPresenter(view: LoginView) : BasePresenter<LoginView>(view) {
 
-    private val LOGIN_SUCCESS_CODE = 20001
+    companion object {
+        private const val LOGIN_SUCCESS_CODE = 20001
+    }
 
     fun login(account: String, password: String) {
         var errorMessage: String? = null

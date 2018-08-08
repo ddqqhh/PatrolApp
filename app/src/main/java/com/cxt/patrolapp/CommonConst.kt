@@ -12,11 +12,6 @@ object CommonConst {
     const val CHECK_POINT = "check_point"
     const val DEVICE = "device"
 
-    const val DATE_BROAD_SHORT = "yyyyMMdd"
-    const val TIME_BROAD_SHORT = "HHmmss"
-    const val TIME_EXTREME_SHORT = "HHmm"
-    const val TIME_EXACT_SHORT_CHINESE = "HH点mm分"
-    const val DATE_FULL = "yyyy-MM-dd"
     const val DATE_TIME_FULL_WITHOUT_YEAR = "MM-dd HH:mm:ss"
     const val DATE_TIME_FULL = "yyyy-MM-dd HH:mm:ss"
 }
