@@ -73,12 +73,12 @@ class SimpleLongPressButton @JvmOverloads constructor(context: Context, attrs: A
 
     init {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SimpleLongPressButton)
-        val outsideCircleColor = typedArray.getColor(R.styleable.SimpleLongPressButton_dongqh_outsideCircleColor, Color.parseColor("#dddddd"))
-        val insideCircleColor = typedArray.getColor(R.styleable.SimpleLongPressButton_dongqh_insideCircleColor, Color.WHITE)
-        val rollingArcColor = typedArray.getColor(R.styleable.SimpleLongPressButton_dongqh_rollingArcColor, Color.parseColor("#458B00"))
-        val textColor = typedArray.getColor(R.styleable.SimpleLongPressButton_dongqh_textColor, Color.BLACK)
-        val textSize = typedArray.getDimensionPixelSize(R.styleable.SimpleLongPressButton_dongqh_textSize, 0)
-        buttonTitle = typedArray.getString(R.styleable.SimpleLongPressButton_dongqh_text)
+        val outsideCircleColor = typedArray.getColor(R.styleable.SimpleLongPressButton_button_outsideCircleColor, Color.parseColor("#dddddd"))
+        val insideCircleColor = typedArray.getColor(R.styleable.SimpleLongPressButton_button_insideCircleColor, Color.WHITE)
+        val rollingArcColor = typedArray.getColor(R.styleable.SimpleLongPressButton_button_rollingArcColor, Color.parseColor("#458B00"))
+        val textColor = typedArray.getColor(R.styleable.SimpleLongPressButton_button_textColor, Color.BLACK)
+        val textSize = typedArray.getDimensionPixelSize(R.styleable.SimpleLongPressButton_button_textSize, 0)
+        buttonTitle = typedArray.getString(R.styleable.SimpleLongPressButton_button_text)
 
         outsideCirclePaint.color = outsideCircleColor
         insideCirclePaint.color = insideCircleColor

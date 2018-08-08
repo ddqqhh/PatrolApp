@@ -39,7 +39,7 @@ class CheckPointBindActivity : BaseEditTextActivity(), CheckPointBindView {
         device?.let {
             val snCode = getString(R.string.sn_format).with(it.deviceAddress.replace(":", ""))
             sn_code_text.text = snCode
-            submit_button.setOnClickListener {
+            submit_button.setOnClickListener { _ ->
                 when (checkPoint != null) {
                     true -> presenter.replaceCheckPoint(device.deviceAddress, checkPoint!!)
                     false -> presenter.bindCheckPoint(device.deviceAddress, check_point_edit.text.toString())

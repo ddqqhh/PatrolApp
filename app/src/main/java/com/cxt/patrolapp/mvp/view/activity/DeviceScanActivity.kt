@@ -35,9 +35,9 @@ class DeviceScanActivity : BaseActivity() {
 
         device_info_view.setOnClickListener {
             val deviceView = it as DeviceInfoItem
-            startActivity(CheckPointBindActivity::class.java) {
-                it.putExtra(CommonConst.DEVICE, deviceView.device)
-                it.putExtra(CommonConst.CHECK_POINT, intent.getSerializableExtra(CommonConst.CHECK_POINT))
+            startActivity(CheckPointBindActivity::class.java) { intent ->
+                intent.putExtra(CommonConst.DEVICE, deviceView.device)
+                intent.putExtra(CommonConst.CHECK_POINT, intent.getSerializableExtra(CommonConst.CHECK_POINT))
             }
         }
     }

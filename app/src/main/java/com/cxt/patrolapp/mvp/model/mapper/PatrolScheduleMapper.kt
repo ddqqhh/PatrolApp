@@ -15,7 +15,7 @@ object PatrolScheduleMapper {
             val dataTime = it.scheduleTime.toDateTime(CommonConst.DATE_TIME_FULL)
             val type = PatrolScheduleType.getType(it.scheduleType)
             val status = PatrolScheduleStatus.getStatus(it.scheduleStatus)
-            PatrolSchedule(it.id, it.scheduleName, dataTime, status, type).let { result.add(it) }
+            PatrolSchedule(it.id, it.scheduleName, dataTime, status, type).let { schedule -> result.add(schedule) }
         }
         return result
     }

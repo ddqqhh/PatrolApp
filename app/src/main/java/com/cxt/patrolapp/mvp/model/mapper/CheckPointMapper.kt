@@ -14,7 +14,7 @@ object CheckPointMapper {
                     deviceAddress = it.deviceAddress,
                     checkPointName = it.checkPointName,
                     status = CheckPointStatus.getStatus(it.checkPointStatus))
-                    .let { result.add(it) }
+                    .let { checkPoint -> result.add(checkPoint) }
         }
         return result
     }
@@ -28,7 +28,7 @@ object CheckPointMapper {
                             checkPointName = it.checkPointName,
                             status = CheckPointStatus.getStatus(it.checkPointStatus),
                             isChecked = it.checkedStatus == 1)
-                            .let { result.add(it) }
+                            .let { checkPoint -> result.add(checkPoint) }
                 }
         return result
     }

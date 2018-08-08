@@ -82,8 +82,8 @@ class CheckInActivity : BaseActivity(), CheckInView {
                         .setCancelable(false)
                         .show()
             } else {
-                SkyBeaconManager.startRange {
-                    currentCheckPoint = it.filter { it.distance < 0.2 }
+                SkyBeaconManager.startRange { deviceList ->
+                    currentCheckPoint = deviceList.filter { it.distance < 0.2 }
                             .sortedBy { it.distance }
                             .firstOrNull()
                             ?.let { device -> checkPointList.firstOrNull { it.deviceAddress == device.deviceAddress } }

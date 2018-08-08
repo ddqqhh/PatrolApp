@@ -2,12 +2,12 @@
 <resources>
 
     <declare-styleable name="SimpleLongPressButton">
-        <attr name="dongqh_outsideCircleColor" format="color" />
-        <attr name="dongqh_insideCircleColor" format="color" />
-        <attr name="dongqh_rollingArcColor" format="color" />
-        <attr name="dongqh_textColor" format="color" />
-        <attr name="dongqh_textSize" format="dimension" />
-        <attr name="dongqh_text" format="string" />
+        <attr name="button_outsideCircleColor" format="color" />
+        <attr name="button_insideCircleColor" format="color" />
+        <attr name="button_rollingArcColor" format="color" />
+        <attr name="button_textColor" format="color" />
+        <attr name="button_textSize" format="dimension" />
+        <attr name="button_text" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomSingleDrawableTextView">
