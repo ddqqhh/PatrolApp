@@ -72,9 +72,9 @@ class CheckInActivity : BaseActivity(), CheckInView {
         if (checkPointList.isNotEmpty()) {
             val doneSum = checkPointList.filter { it.isChecked }.size
             val doingSum = checkPointList.size - doneSum
-            val format = DecimalFormat("00")
-            checked_count_text.text = getString(R.string.checked_count_format).with(format.format(doneSum))
-            uncheck_count_text.text = getString(R.string.uncheck_count_format).with(format.format(doingSum))
+            val decimalFormat = DecimalFormat("00")
+            checked_count_text.text = getString(R.string.checked_count_format).with(decimalFormat.format(doneSum))
+            uncheck_count_text.text = getString(R.string.uncheck_count_format).with(decimalFormat.format(doingSum))
             if (doingSum == 0) {
                 AlertDialog.Builder(this)
                         .setMessage(getString(R.string.alert_all_check_point_is_checked))

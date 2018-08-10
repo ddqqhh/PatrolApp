@@ -57,7 +57,7 @@ class DeviceScanActivity : BaseActivity() {
     private fun startScan() {
         progress_bar.visibility = View.VISIBLE
         device_info_view.visibility = View.GONE
-        SkyBeaconManager.startMonitor { deviceList ->
+        SkyBeaconManager.startRange { deviceList ->
             runOnUiThread {
                 deviceList.sortedBy { it.distance }
                         .firstOrNull()
