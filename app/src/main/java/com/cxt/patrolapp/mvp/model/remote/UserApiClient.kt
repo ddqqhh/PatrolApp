@@ -16,4 +16,8 @@ interface UserApiClient {
     @POST("/api/login")
     fun login(@Field("username") account: String,
               @Field("encrypt") passwordMd5: String): Observable<BaseResponse<Long>>
+
+    @FormUrlEncoded
+    @POST("/api/checkUser")
+    fun checkUid(@Field("uid") uid: Long): Observable<BaseResponse<Unit>>
 }

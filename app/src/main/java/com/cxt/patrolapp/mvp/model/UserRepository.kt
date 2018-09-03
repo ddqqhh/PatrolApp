@@ -22,5 +22,7 @@ object UserRepository {
 
     fun getSalt(account: String) = userApiClient.getSalt(account)
 
+    fun checkUid(uid: Long) = userApiClient.checkUid(uid)
+    
     fun login(account: String, passwordMd5: String) = userApiClient.login(account, passwordMd5)
 }
