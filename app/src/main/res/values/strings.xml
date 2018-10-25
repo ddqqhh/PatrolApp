@@ -34,6 +34,7 @@
 
     <string name="patrol_schedule">巡更任务</string>
     <string name="patrol_finished">任务完成</string>
+    <string name="device_check">设备巡检</string>
     <string name="add_check_point">新增巡更点</string>
     <string name="device_repair_request">设备报修</string>
     <string name="device_replace">设备更换</string>
@@ -52,7 +53,6 @@
 
     <string name="check_point_list">巡更点列表</string>
     <string name="scan_device">设备扫描</string>
-    <string name="device_check">设备检查</string>
 
     <string name="device_status_is_normal">设备正常</string>
     <string name="device_status_low_power">电量：%1$s</string>
@@ -76,6 +76,7 @@
     <string name="alert_all_check_point_is_checked">已完成所有签到！</string>
     <string name="alert_check_point_is_trouble">巡更点存在故障？</string>
     <string name="alert_check_point_is_empty">巡更点为空！</string>
+    <string name="alert_check_point_had_been_repairing_requested">该巡更点已是报修状态</string>
     <string name="alert_repair_request_confirm">巡更点 <![CDATA[<font color="#f0a728">%1$s</font>]]> 将被变为 <![CDATA[<font color="#ff5555">报修</font>]]> 状态，确定吗？</string>
     <string name="alert_logout">确定要退出登录吗</string>
 
