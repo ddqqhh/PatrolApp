@@ -12,8 +12,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="120dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="120dp">
+
+        <!--<com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView-->
+        <!--android:id="@+id/device_check_button"-->
+        <!--style="@style/CommonTextStyle"-->
+        <!--android:layout_width="90dp"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:drawablePadding="13dp"-->
+        <!--android:text="@string/device_check"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--app:textView_drawableHeight="45dp"-->
+        <!--app:textView_drawableTop="@drawable/device_check"-->
+        <!--app:textView_drawableWidth="45dp" />-->
 
         <com.cxt.patrolapp.mvp.view.customview.CustomSingleDrawableTextView
             android:id="@+id/bind_new_one_button"
@@ -86,6 +97,6 @@
         android:layout_height="47dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
-        android:src="@drawable/cross_gray" />
+        android:src="@drawable/cross_black" />
 
 </RelativeLayout>

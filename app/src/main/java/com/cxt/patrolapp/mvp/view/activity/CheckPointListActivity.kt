@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.cxt.patrolapp.CommonConst
 import com.cxt.patrolapp.mvp.view.contract.CheckPointListView
@@ -44,8 +45,15 @@ class CheckPointListActivity : BaseActivity(), CheckPointListView {
             val startPadding = 30.toPx()
             val layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, itemHeight)
             val toRepairRequest: (CheckPoint) -> Unit = {
-                setResult(CommonConst.GET_CHECK_POINT_RESULT, intent.putExtra(CommonConst.CHECK_POINT, it))
-                finish()
+                if (it.status != CheckPointStatus.REPAIR_REQUESTING) {
+                    setResult(CommonConst.GET_CHECK_POINT_RESULT, intent.putExtra(CommonConst.CHECK_POINT, it))
+                    finish()
+                } else {
+                    AlertDialog.Builder(this)
+                            .setMessage(R.string.alert_check_point_had_been_repairing_requested)
+                            .setPositiveButton(R.string.ok, null)
+                            .show()
+                }
             }
             pointList.forEach { checkPoint ->
                 val statusString = when (checkPoint.status) {
