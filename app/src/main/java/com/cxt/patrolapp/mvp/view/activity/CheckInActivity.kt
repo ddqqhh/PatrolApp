@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.view.View
 import com.cxt.patrolapp.CommonConst
 import com.cxt.patrolapp.mvp.view.contract.CheckInView
-import com.cxt.patrolapp.utils.SkyBeaconManager
 import com.cxt.patrolapp.R
 import com.cxt.patrolapp.extend.startActivity
 import com.cxt.patrolapp.extend.with
 import com.cxt.patrolapp.mvp.model.entity.CheckPoint
 import com.cxt.patrolapp.mvp.model.entity.PatrolSchedule
 import com.cxt.patrolapp.mvp.presenter.CheckInPresenter
+import com.cxt.patrolapp.utils.MinewBeaconManager
 import com.cxt.patrolapp.utils.VibratorManager
 import kotlinx.android.synthetic.main.activity_check_in.*
 import java.io.Serializable
@@ -82,15 +82,15 @@ class CheckInActivity : BaseActivity(), CheckInView {
                         .setCancelable(false)
                         .show()
             } else {
-                SkyBeaconManager.startRange { deviceList ->
-                    currentCheckPoint = deviceList.filter { it.distance < 0.2 }
+                MinewBeaconManager.startRange { deviceList ->
+                    currentCheckPoint = deviceList.asSequence()
+                            .filter { it.distance < 0.2 }
                             .sortedBy { it.distance }
                             .firstOrNull()
-                            ?.let { device -> checkPointList.firstOrNull { it.deviceAddress == device.deviceAddress } }
+                            ?.let { device -> checkPointList.firstOrNull { it.deviceAddress == device.address } }
                     runOnUiThread { refreshView() }
                 }
             }
-
         } else {
             checked_count_text.text = getString(R.string.checked_count_format).with("00")
             uncheck_count_text.text = getString(R.string.uncheck_count_format).with("00")
@@ -112,6 +112,11 @@ class CheckInActivity : BaseActivity(), CheckInView {
                 .setPositiveButton(getString(R.string.ok)) { _, _ -> reloadAction.invoke() }
                 .setOnCancelListener { reloadAction.invoke() }
                 .show()
+    }
+
+    override fun onDestroy() {
+        MinewBeaconManager.stopScan()
+        super.onDestroy()
     }
 
     private fun refreshView() {

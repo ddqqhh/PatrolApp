@@ -41,7 +41,7 @@ class MainActivity : BaseActivity(), MainView {
         plan_list_view.addItemDecoration(object : RecyclerView.ItemDecoration() {
             override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
                 outRect.top = when (parent.getChildAdapterPosition(view) == 0) {
-                    true -> 30.toPx()
+                    true -> 45.toPx()
                     false -> 0
                 }
                 outRect.bottom = when (parent.getChildAdapterPosition(view) == (parent.adapter?.itemCount

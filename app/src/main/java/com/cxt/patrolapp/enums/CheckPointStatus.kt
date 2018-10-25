@@ -1,6 +1,7 @@
 package com.cxt.patrolapp.enums
 
 enum class CheckPointStatus {
+
     NORMAL,
     REPAIR_REQUESTING,
     UNKNOWN;

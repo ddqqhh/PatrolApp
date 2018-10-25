@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_eeeeee"
+    android:paddingBottom="50dp">
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:src="@drawable/cross_gray"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/beacon_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/beacon_icon" />
+
+    <TextView
+        android:id="@+id/check_point_name_text"
+        style="@style/CommonTextStyle"
+        android:layout_below="@+id/beacon_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/CommonHorizontalDividerStyle"
+        android:layout_below="@+id/check_point_name_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/blue_6495ED" />
+
+    <LinearLayout
+        android:id="@+id/device_info_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/device_name_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CommonTextStyle"
+                android:text="@string/device_name_with_colon"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/device_name_text"
+                style="@style/CommonTextStyle"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/device_status_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CommonTextStyle"
+                android:text="@string/device_status_with_colon"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/device_status_text"
+                style="@style/CommonTextStyle"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/request_button"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@+id/device_info_area"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_check_point_info_dialog_request_button"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textColor="@drawable/selector_check_point_info_dialog_request_button_text_color"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

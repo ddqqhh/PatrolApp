@@ -21,7 +21,9 @@ class SimpleLongPressButton @JvmOverloads constructor(context: Context, attrs: A
 
     private val outsideCirclePaint = Paint()
     private val insideCirclePaint = Paint()
-    private val rollingArcPaint = Paint().apply { style = Paint.Style.STROKE }
+    private val rollingArcPaint = Paint().apply {
+        style = Paint.Style.STROKE
+    }
     private val textPaint = Paint().apply {
         style = Paint.Style.STROKE
         textAlign = Paint.Align.CENTER
@@ -115,7 +117,7 @@ class SimpleLongPressButton @JvmOverloads constructor(context: Context, attrs: A
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
         if (textPaint.textSize == 0f && diameter != 0f) {
-            textPaint.textSize = diameter / 6
+            textPaint.textSize = diameter / 7
         }
         if (rollingArcPaint.strokeWidth == 0f && diameter != 0f) {
             rollingArcPaint.strokeWidth = diameter / 6 / 2.5f

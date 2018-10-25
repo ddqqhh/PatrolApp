@@ -13,11 +13,21 @@
     <string name="normal">正常</string>
     <string name="logout">退出登陆</string>
 
+    <string name="device_name_with_colon">设备名称：</string>
+    <string name="device_status_with_colon">设备状态：</string>
+
+    <string name="repairing">报修中</string>
+    <string name="auto_requesting_repair">自动提交报修中</string>
+    <string name="auto_requested_repair">已自动提交报修</string>
+    <string name="auto_request_repair_error">自动提交报修失败</string>
+    <string name="auto_re_request_repair">重新提交报修</string>
+
     <string name="be_checked">已签</string>
     <string name="not_be_check">未签</string>
 
-    <string name="sn_format">SN码：%1$s</string>
+    <string name="sn_format">设备：%1$s</string>
     <string name="distance_format">距离：%1$s米</string>
+    <string name="distance_format_simple">%1$s米</string>
     <string name="checked_count_format">已签\n%1$s</string>
     <string name="uncheck_count_format">未签\n%1$s</string>
     <string name="location_current">当前位置</string>
@@ -31,6 +41,8 @@
 
     <string name="login_success">登录成功</string>
 
+    <string name="be_close_to_device_to_get_device_info">设备不在附近</string>
+
     <string name="check_point_bind_success">绑定成功</string>
 
     <string name="check_in">签到</string>
@@ -40,6 +52,11 @@
 
     <string name="check_point_list">巡更点列表</string>
     <string name="scan_device">设备扫描</string>
+    <string name="device_check">设备检查</string>
+
+    <string name="device_status_is_normal">设备正常</string>
+    <string name="device_status_low_power">电量：%1$s</string>
+    <string name="device_status_low_power_full">设备电量低（%1$s）</string>
 
     <string name="patrol_schedule_is_done">该巡更任务已完成</string>
 
@@ -55,6 +72,7 @@
     <string name="error_password_is_empty">密码不能为空！</string>
 
     <string name="alert_location_permission_request">我们需要使用定位功能，请允许我们打开定位权限</string>
+    <string name="alert_bluetooth_is_unavailable">该设备不支持蓝牙，请尝试其他设备</string>
     <string name="alert_all_check_point_is_checked">已完成所有签到！</string>
     <string name="alert_check_point_is_trouble">巡更点存在故障？</string>
     <string name="alert_check_point_is_empty">巡更点为空！</string>

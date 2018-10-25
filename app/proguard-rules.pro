@@ -83,8 +83,3 @@
 # For RxPermissions
 -keep class com.tbruyelle.rxpermissions2.** { *; }
 -keep interface com.tbruyelle.rxpermissions2.** { *; }
-
-# For Skybeacon
--libraryjars libs/SKYBeaconSDK_V2.3.0_pro.jar
--dontwarn com.skybeacin.sdk.**
--keep class com.skybeacin.sdk.** { *;}

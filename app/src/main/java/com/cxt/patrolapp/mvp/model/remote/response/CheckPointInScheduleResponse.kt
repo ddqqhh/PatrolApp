@@ -1,4 +1,4 @@
-package com.cxt.patrolapp.mvp.model.entity
+package com.cxt.patrolapp.mvp.model.remote.response
 
 import com.google.gson.annotations.SerializedName
 

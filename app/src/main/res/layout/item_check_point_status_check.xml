@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <View
+            android:id="@+id/device_status_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/progress_bar"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/check_point_name"
+            style="@style/CommonTextStyle"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/device_status_icon"
+            android:ellipsize="end"
+            android:maxWidth="160dp"
+            android:maxLines="1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/repair_status_text"
+            style="@style/CommonTextStyle"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/gray_666666"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/device_status_text"
+        style="@style/CommonTextStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red_ff5555"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

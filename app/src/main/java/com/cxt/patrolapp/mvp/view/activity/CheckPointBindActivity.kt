@@ -6,10 +6,10 @@ import com.cxt.patrolapp.R
 import com.cxt.patrolapp.extend.showToast
 import com.cxt.patrolapp.extend.startActivity
 import com.cxt.patrolapp.extend.with
+import com.cxt.patrolapp.mvp.model.entity.BeaconDevice
 import com.cxt.patrolapp.mvp.model.entity.CheckPoint
 import com.cxt.patrolapp.mvp.presenter.CheckPointBindPresenter
 import com.cxt.patrolapp.mvp.view.contract.CheckPointBindView
-import com.skybeacon.sdk.locate.SKYBeacon
 import kotlinx.android.synthetic.main.activity_check_point_bind.*
 
 class CheckPointBindActivity : BaseEditTextActivity(), CheckPointBindView {
@@ -35,14 +35,14 @@ class CheckPointBindActivity : BaseEditTextActivity(), CheckPointBindView {
         }
         toolbar.title = toolbarTitle
 
-        val device = intent.getSerializableExtra(CommonConst.DEVICE) as? SKYBeacon
+        val device = intent.getSerializableExtra(CommonConst.DEVICE) as? BeaconDevice
         device?.let {
-            val snCode = getString(R.string.sn_format).with(it.deviceAddress.replace(":", ""))
+            val snCode = getString(R.string.device_name_with_colon).with(it.name)
             sn_code_text.text = snCode
             submit_button.setOnClickListener { _ ->
                 when (checkPoint != null) {
-                    true -> presenter.replaceCheckPoint(device.deviceAddress, checkPoint!!)
-                    false -> presenter.bindCheckPoint(device.deviceAddress, check_point_edit.text.toString())
+                    true -> presenter.replaceCheckPoint(device.address, checkPoint!!)
+                    false -> presenter.bindCheckPoint(device.address, check_point_edit.text.toString())
                 }
             }
         }

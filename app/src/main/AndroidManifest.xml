@@ -46,9 +46,10 @@
             android:name=".mvp.view.activity.DeviceScanActivity"
             android:theme="@style/GrayBackgroundActivityStyle" />
         <activity android:name=".mvp.view.activity.PatrolScheduleProgressActivity" />
-
-        <service android:name="com.skybeacon.sdk.locate.BleScanService" />
-        <service android:name="com.skybeacon.sdk.config.BluetoothLeService" />
+        <activity
+            android:name=".mvp.view.activity.DeviceStatusCheckActivity"
+            android:theme="@style/GrayBackgroundActivityStyle">
+        </activity>
 
     </application>
 

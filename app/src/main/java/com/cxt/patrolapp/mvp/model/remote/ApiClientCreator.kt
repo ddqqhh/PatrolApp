@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit
 
 object ApiClientCreator {
 
-    //    private const val BASE_URL = "http://jg.healthtop.cn"
-    private const val BASE_URL = "http://192.168.0.114"
+        private const val BASE_URL = "http://jg.healthtop.cn"
+//    private const val BASE_URL = "http://192.168.0.114"
 
     private fun createClient(waitTime: Int) = OkHttpClient.Builder()
             .connectTimeout(waitTime.toLong(), TimeUnit.SECONDS)

@@ -1,6 +1,6 @@
 package com.cxt.patrolapp.mvp.model.remote
 
-import com.cxt.patrolapp.mvp.model.entity.CheckPointInScheduleResponse
+import com.cxt.patrolapp.mvp.model.remote.response.CheckPointInScheduleResponse
 import com.cxt.patrolapp.mvp.model.remote.response.BaseResponse
 import com.cxt.patrolapp.mvp.model.remote.response.CheckPointResponse
 import io.reactivex.Observable

@@ -3,10 +3,13 @@
 
     <color name="gray_333333">#333</color>
     <color name="gray_666666">#666</color>
+    <color name="gray_999999">#999</color>
     <color name="gray_eeeeee">#eee</color>
     <color name="gray_d2d2d2">#d2d2d2</color>
 
     <color name="green_33cc66">#33cc66</color>
+
+    <color name="blue_6495ED">#6495ED</color>
 
     <color name="yellow_f0a728">#f0a728</color>
 

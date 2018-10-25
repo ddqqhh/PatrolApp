@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.1'
     defaultConfig {
         applicationId "com.cxt.patrolapp"
         minSdkVersion 21
@@ -26,11 +25,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation files('libs/SKYBeaconSDK_V2.3.0_pro.jar')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0-rc01'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-rc01'
-    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation files('libs/MinewBeaconScan.jar')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     // rxandroid
     // rxkotlin
     implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
